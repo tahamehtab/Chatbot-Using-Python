@@ -5,6 +5,8 @@ from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 
 os.environ["API_KEY"] = os.getenv("API_KEY")
+# I saved my API key in enviroment variables and call it directly here 
+# so that it cannot be spoiled so for testing use your own Gemini API key.
 
 genai.configure(api_key=os.environ["API_KEY"])
 
